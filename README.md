@@ -13,3 +13,7 @@ node server.js
 ```
 ![Cam](https://github.com/tpaphysics/toogleESP32/blob/master/frontAPI.png?raw=true)
 
+### License
+
+Licensed under the MIT [licence.](https://github.com/tpaphysics/toogleESP32/blob/master/LICENSE)
+
