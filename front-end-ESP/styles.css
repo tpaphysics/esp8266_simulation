@@ -1,0 +1,35 @@
+body {
+    background-color: rgba(138, 194, 92, 0.521);
+    text-align: center;
+}
+
+header {
+    color: rgba(5, 11, 19, 0.836);
+    font-family: Arial;
+    font-size: 12pt;
+    text-shadow: 2px 2px 30px greenyellow;
+
+}
+
+section {
+    background-color: rgba(15, 23, 36, 0.836);
+    border-radius: 5px;
+    box-shadow: 5px 5px 40px rgb(12, 14, 11);
+    padding: 15px;
+    width: auto;
+    margin: auto;
+    display: flex;
+    max-width: 700px;
+    justify-content: center;
+    align-items: center;
+}
+
+section button {
+    background-color: gray;
+    border-radius: 2px;
+    width:170px;
+    height: 30px;
+}
+a{
+    color: rgb(81, 81, 180);
+}
