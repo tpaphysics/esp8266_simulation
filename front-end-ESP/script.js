@@ -46,20 +46,27 @@ const toogle = (plugNunber) => {
 
     const base_url = 'http://localhost:3030/api/toogle?plug=';
     const api_url = `${base_url}${plugNunber}`;
-
+    
     getHTML(api_url)
         .then((response) => {
             const { statePlugs } = response
+            const index = plugNunber -1;
+            
+            if ( statePlugs[index] == 1 ) {
+                let btn = document.getElementById(`t${plugNunber}`);
+                btn.style.backgroundColor = "greenyellow"
+            } else {
+                let btn = document.getElementById(`t${plugNunber}`);
+                btn.style.backgroundColor = "grey"
+            }
+            
             console.log( statePlugs );
         }).catch((error) => {
             console.log(error);
         });
-    
-        verifyButtonState();    
 }
 
 var interval = window.setInterval(verifyButtonState, 10000);
-
 
 
 
