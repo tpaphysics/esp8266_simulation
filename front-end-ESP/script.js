@@ -23,12 +23,15 @@ const verifyButtonState = () => {
             const { statePlugs } = response
             
             for(let i = 0; i<=3 ; i++){
-                let btn = document.getElementById(`t${i+1}`);
+                const btn = document.getElementById(`t${i+1}`);
+                
                 
                 if (statePlugs[i] == 1) {
-                    btn.style.backgroundColor = "greenyellow"
+                    btn.style.backgroundColor = "#c5ff3c";
+                    btn.style.color = "grey";
                 } else {
-                    btn.style.backgroundColor = "grey"
+                    btn.style.backgroundColor =  "#333333";
+                    btn.style.color = "grey"; 
                 } 
             }
            
@@ -36,8 +39,10 @@ const verifyButtonState = () => {
             
             console.log(error);
             for(let i = 0; i<=3 ; i++){
-                let btn = document.getElementById(`t${i+1}`);
-                btn.style.backgroundColor = "rgba(15, 23, 36, 0.836)"
+                const btn = document.getElementById(`t${i+1}`);
+                btn.style.backgroundColor = "#283520"; //
+                btn.style.color = "grey";
+                
             }
         });
 }
@@ -53,11 +58,13 @@ const toogle = (plugNunber) => {
             const index = plugNunber -1;
             
             if ( statePlugs[index] == 1 ) {
-                let btn = document.getElementById(`t${plugNunber}`);
-                btn.style.backgroundColor = "greenyellow"
+                const btn = document.getElementById(`t${plugNunber}`);
+                btn.style.backgroundColor = "#c5ff3c";
+                btn.style.color = "grey";
             } else {
-                let btn = document.getElementById(`t${plugNunber}`);
-                btn.style.backgroundColor = "grey"
+                const btn = document.getElementById(`t${plugNunber}`);
+                btn.style.backgroundColor = "#333333"; 
+                btn.style.color = "grey";
             }
             
             console.log( statePlugs );
@@ -67,16 +74,3 @@ const toogle = (plugNunber) => {
 }
 
 var interval = window.setInterval(verifyButtonState, 10000);
-
-
-
-
-
-
-
-
-
-
-
-
-
