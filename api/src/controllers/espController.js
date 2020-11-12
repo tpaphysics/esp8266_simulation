@@ -15,7 +15,7 @@ module.exports = {
         const { plug } = req.query;
         
         if ( ( plug < 1 || plug >4 ) ) {
-            return res.send('Invalid State Error!'); 
+           await res.send('Invalid State Error!'); 
         } else {
             
             const index = plug -1;
