@@ -7,11 +7,11 @@ const state = [
 
 module.exports = {
 
-    defaulTeste( req, res ){
-       return  res.send('Hello API!');
+    async defaulTeste( req, res ){
+       await res.send('Hello API!');
     },
     
-    setState(req,res){
+    async setState(req,res){
         const { plug } = req.query;
         
         if ( ( plug < 1 || plug >4 ) ) {
@@ -28,12 +28,12 @@ module.exports = {
             
             const response = { statePlugs: state }
            
-            return res.json(response);
+            await res.json(response);
         }
     },
 
-    verifyState(req,res){
-        return res.json({ statePlugs: state });
+    async verifyState(req,res){
+        await res.json({ statePlugs: state });
     }
 }
 
