@@ -4,7 +4,7 @@ const cors = require('cors');
 const app = express();
 app.use(cors());
 
-app.use('/api',require('./src/routes'));
+app.use('/',require('./src/routes'));
 
 
 console.log('Server port 3030...');
