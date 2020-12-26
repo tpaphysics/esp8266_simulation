@@ -7,15 +7,15 @@ const state = [
 
 module.exports = {
 
-    async defaulTeste( req, res ){
-       await res.send('Hello API!');
+    defaulTeste( req, res ){
+        res.send('Hello API!');
     },
     
-    async setState(req,res){
+    setState(req,res){
         const { plug } = req.query;
         
         if ( ( plug < 1 || plug >4 ) ) {
-           await res.send('Invalid State Error!'); 
+            res.send('Invalid State Error!'); 
         } else {
             
             const index = plug -1;
@@ -28,12 +28,12 @@ module.exports = {
             
             const response = { statePlugs: state }
            
-            await res.json(response);
+            res.json(response);
         }
     },
 
-    async verifyState(req,res){
-        await res.json({ statePlugs: state });
+    verifyState(req,res){
+        res.json({ statePlugs: state });
     }
 }
 
